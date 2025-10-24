@@ -39,7 +39,15 @@ function playRound(humanChoice, computerChoice) {
 	console.log("Computer Score: " + computerScore);
 }
 
-const humanChoice = getHumanChoice();
-const computerChoice = getComputerChoice();
+function playGame(rounds) {
+	for (i = 0; i < rounds; ++i) {
+		const humanChoice = getHumanChoice();
+		const computerChoice = getComputerChoice();
 
-playRound(humanChoice, computerChoice)
+		playRound(humanChoice, computerChoice)
+	}
+}
+
+const rounds = prompt("Enter number of rounds to play");
+playGame(rounds);
+
